@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Joomla! CMS [![Analytics](https://ga-beacon.appspot.com/UA-544070-3/joomla-cms/readme)](https://github.com/igrigorik/ga-beacon)
 ====================
 
@@ -89,3 +90,7 @@ Copyright:
 * [Credits](http://docs.joomla.org/Joomla!_Credits_and_Thanks)
 * Distributed under the GNU General Public License version 2 or later
 * See [Licenses details](http://docs.joomla.org/Joomla_Licenses)
+=======
+# lindas_no_altar
+Emagrecimento de noivas
+>>>>>>> e1df10918b620658462509de71dd86ab3140adf3
