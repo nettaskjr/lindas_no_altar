@@ -1,0 +1,358 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// MENUS
+//---------------------------------------------------------------
+
+.nav.menu {
+  margin: 0;
+  li {
+    display: block;
+    position: relative;
+    padding: 0;
+    &:hover > a,
+    &:hover > span.separator,
+    &.active > a,
+    &.active > span.separator {
+      color: @JMstyleLink;
+    }
+  }
+  ul {
+    padding: 0 0 5px;
+    margin: 0;
+  }
+  > li > ul {
+    padding: 0 0 13px;
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    background-image: url('../images/menu-border-bg.png');
+  }
+  > li:first-child {
+    > a,
+    > span.separator {
+      padding-top: 0;
+      margin-top: 0;
+    }
+  }
+  > li:last-child {
+    > a,
+    > span.separator {
+      background: none;
+    }
+  }
+  > li.parent:first-child {
+    > a,
+    > span.separator {
+      padding-top: 0;
+      margin-top: 0;
+      &:after {
+        top: 0;
+      }
+    }
+  }
+  li a,
+  li span.separator {
+    display: block;
+    font-size: @JMmenuFontSize;
+    line-height: 1.1;
+    font-weight: 400;
+    padding: 13px 0 0;
+    vertical-align: top;
+    text-decoration: none;
+    color: @JMmenuFontColor;
+    background: none;
+  }
+  > li > a,
+  > li > span.separator {
+		padding: 13px 0px;
+		background-repeat: repeat-x;
+		background-position: left bottom;
+		background-image: url("../images/menu-border-bg.png");
+  }
+  > li.parent > a,
+  > li.parent > span.separator {
+    position: relative;
+    padding-right: 10px;
+    &:after {
+      content: '+';
+      font-size: @JMmenuFontSize;
+      line-height: 1.1;
+      position: absolute;
+      right: 0;
+      left: auto;
+      top: 13px;   
+    }
+  }
+  > li.parent.deeper > a,
+  > li.parent.deeper > span.separator {
+    &:after {
+      content: '-';
+    }
+  }
+  .nav-child {
+    > li {
+      padding-left: 20px;
+      background-position: left 18px;
+      background-repeat: no-repeat; 
+      background-image: url('../images/menu-arrow.png');
+      &:hover,
+      &.active {
+        background-image: url('../images/@{JMimgDir}/menu-arrow.png');
+      }
+    }
+  }
+  li a img {
+    vertical-align: middle;
+    margin: 0 15px 0 0;
+  }
+}
+
+//dark-ms footer and offcanvas
+#jm-footer .nav.menu,
+#jm-offcanvas .nav.menu,
+.dark-ms .nav.menu {
+  > li > ul {
+    background-image: url('../images/menu-border-bg-light.png');
+  }
+  > li > a,
+  > li > span.separator {
+    background-image: url('../images/menu-border-bg-light.png');
+  }
+  > li:last-child {
+    > a,
+    > span.separator {
+      background: none;
+    }
+  } 
+}
+
+//menu on footer
+#jm-footer .nav.menu {
+	li {
+		&:hover > a,
+		&:hover > span.separator,
+		&.active > a,
+		&.active > span.separator {
+			color: @JMmenuFooterFontColorHover;
+		}
+		a,
+		span.separator{
+			color: @JMmenuFooterFontColor;
+		}
+	}
+}
+
+//menu on dark-ms
+.dark-ms .nav.menu {
+	li {
+		&:hover > a,
+		&:hover > span.separator,
+		&.active > a,
+		&.active > span.separator {
+			color: @JMmenuDarkmsFontColorHover;
+		}
+		a,
+		span.separator{
+			color: @JMmenuDarkmsFontColor;
+		}
+	}
+}
+
+//menu on dark-ms
+#jm-offcanvas .nav.menu {
+	li {
+		&:hover > a,
+		&:hover > span.separator,
+		&.active > a,
+		&.active > span.separator {
+			color: @JMmenuOffcanvasFontColorHover;
+		}
+		a,
+		span.separator{
+			color: @JMmenuOffcanvasFontColor;
+		}
+	}
+}
+
+//menu on white-ms
+.white-ms .nav.menu {
+	li {
+		&:hover > a,
+		&:hover > span.separator,
+		&.active > a,
+		&.active > span.separator {
+			color: @JMmenuWhitesFontColorHover;
+		}
+		a,
+		span.separator{
+			color: @JMmenuWhitemsFontColor;
+		}
+	}
+}
+
+//megamenu menu
+.dj-megamenu .nav.menu {
+  li {
+    &:hover > a,
+    &:hover > span.separator,
+    &.active > a,
+    &.active > span.separator {
+      color: @JMmenuMegamenuFontColorHover;
+    }
+  }
+  li a,
+  li span.separator {
+    font-size: @JMmenuMegamenuFontSize;
+    color: @JMmegamenuSubmenuFontColor;
+    padding: 15px 0 0;
+    margin: 0;
+    border: none;
+  }
+  > li > a,
+  > li > span.separator {
+    background: none;
+  }
+  > li:first-child {
+    > a,
+    > span.separator {
+      padding-top: 0;
+    }
+    &.parent > a:after,
+    &.parent > span.separator:after {
+      top: 0;
+    }
+  }
+  > li.parent > a,
+  > li.parent > span.separator {
+    padding-right: 15px;
+  }
+  > li.parent > a:after,
+  > li.parent > span.separator:after {
+    font-size: @JMmenuMegamenuFontSize;
+    line-height: 1;
+    top: 17px;
+    left: auto;
+    right: 0;
+  }
+  .nav-child > li {
+    background-position: left 18px;
+  }
+  > li > ul {
+    background: none;
+    padding: 0;
+  }
+}
+
+//topbar menu
+#jm-top-bar .nav.menu {
+  > li {
+    display: inline-block;
+    vertical-align: top;
+    &:hover > a,
+    &:hover > span.separator,
+    &.active > a,
+    &.active > span.separator {
+      color: @JMstyleLink;
+    }
+  }
+  > li > a,
+  > li > span.separator {
+    font-size: @JMtopbarFontSize;
+    padding: 0 0 0 10px;
+    margin: 0 0 0 10px;
+    height: @JMtopbarHeight;
+    line-height: @JMtopbarHeight;
+    position: relative;
+    color: @JMtopbarFontColor;
+    background: none;
+    &:before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 2px;
+      background: @JMtopbarMenuBorderBefore;
+      top: 50%;
+      left: 0;
+      right: auto;
+    }
+  }
+  > li {
+    &:first-child {
+     > a,
+     > span.separator {
+        margin: 0;
+        padding: 0;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+  ul,
+  > li.parent > a:after,
+  > li.parent > span.separator:after {
+    display: none;
+  }
+}
+
+//classic-ms
+.nav.menu.classic-ms {
+  .nav-child > li {
+    padding-left: 20px;
+    background: none!important;
+  }
+  > li > ul {
+    background: none!important;
+    padding: 0;
+  }
+  li a,
+  li span.separator {
+    background: none!important;
+    padding: 0 0 15px;
+    font-size: @JMmenuClassicFontSize;
+    font-weight: 500;
+  }
+  > li.parent > a:after,
+  > li.parent > span.separator:after {
+    display: none;
+  }
+}
+
+//classic-ms on footer
+#jm-footer .nav.menu.classic-ms {
+  li a,
+  li span.separator {
+    color: @JMfooterFontColor;
+  }
+}
+
+//classic-ms on offcanvas
+#jm-offcanvas .nav.menu.classic-ms {
+  li a,
+  li span.separator {
+    color: @JMoffCanvasFontColor;
+  } 
+}
+
+//classic-ms on dark module
+.dark-ms .nav.menu.classic-ms {
+  li a,
+  li span.separator {
+    color: @JMdarkmsText;
+  } 
+}
+
+#jm-footer .nav.menu.classic-ms,
+#jm-offcanvas .nav.menu.classic-ms,
+.dark-ms .nav.menu.classic-ms {
+  li:hover > a,
+  li:hover > span.separator,
+  li.active > a,
+  li.active > span.separator {
+    color: @JMstyleLink;
+  } 
+}

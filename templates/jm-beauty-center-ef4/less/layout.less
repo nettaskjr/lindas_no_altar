@@ -1,0 +1,339 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// LAYOUT
+//---------------------------------------------------------------
+
+//site wrapper
+#jm-allpage {
+  position: relative;
+  background: @JMpageBackground;
+}
+
+.sticky-bar #jm-allpage {
+	padding-top: @JMbarHeight; //this value will be adjusted with jQuery if needed.
+}
+
+// Bar
+// --------------------------
+
+#jm-bar-wrapp {
+	width: 100%;
+}
+
+//sticky
+.sticky-bar #jm-bar-wrapp {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: auto;
+  .box-sizing(border-box);
+  z-index: 9999;
+}
+
+//top bar
+#jm-top-bar {
+  background: @JMtopbarBackground;
+  line-height: @JMtopbarHeight;
+  font-size: @JMtopbarFontSize;
+  color: @JMtopbarFontColor;
+  p {
+    margin: 0;
+  }
+  div.login-greeting, 
+  .logout-button {
+    display: inline-block;
+  }
+  .logout-button {
+    .btn {
+      font-size: 10px;
+      height: 24px;
+      line-height: 1.1;
+      padding: 0 15px;
+      vertical-align: top;
+      margin-left: 10px!important;
+      margin-top: 8px;
+    }
+  }
+}
+
+#jm-top-bar-in {
+	padding: 0 @JMbaseSpace;
+}
+
+// top menu bar
+#jm-djmenu {
+	line-height: 1;
+	padding-top: 22px;
+}
+
+#jm-bar {
+  padding: @JMbarPadding;
+  background: @JMmegamenuBackground;
+  border-top: 1px solid @JMmegamenuBorder;
+  border-bottom: 1px solid @JMmegamenuBorder;
+}
+
+#jm-bar-in {
+	padding: 0 @JMbaseSpace
+}
+
+#jm-bar-left {
+	padding-right: @JMbaseSpace;
+}
+
+#jm-logo-sitedesc {
+	font-family: @JMarticleTitleFontFamily;
+	color: @JMmegamenuFontColor;
+  #jm-logo {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.1;
+    vertical-align: middle;
+    text-transform: uppercase;
+    margin: 0;
+    a {
+    	color: @JMmegamenuFontColor;
+      display: block;
+      text-decoration: none;
+      &:hover {
+        color: @JMstyle;
+      }
+    }
+    img {
+      vertical-align: top;
+      .transition(all 0.2s ease-in);
+      padding: @JMbarPadding;
+    }
+  }
+  #jm-sitedesc {
+    vertical-align: middle;
+  }
+}
+
+// Header
+// --------------------------
+
+#jm-header {
+  color: @JMheaderText;
+}
+
+#jm-header + div {
+	position: relative;
+  z-index: 100;
+}
+
+// Top
+// --------------------------
+
+#jm-top-in {
+  padding: @JMbaseSpace @JMbaseSpace 0;
+  background: @JMmainPageBackground;
+}
+
+// breadcrumbs
+// -------------------------- 
+
+#jm-breadcrumbs-in {
+  padding: @JMbaseSpace @JMbaseSpace 0;
+  background: @JMmainPageBackground;
+}
+
+// main
+// --------------------------
+
+#jm-main-in {
+  padding: @JMbaseSpace @JMbaseSpace 0;
+  background: @JMmainPageBackground;
+}
+
+#jm-maincontent {
+	display: block;
+  margin-bottom: @JMbaseSpace;
+}
+
+// bottom
+// --------------------------
+
+#jm-bottom-in {
+  padding: @JMbaseSpace @JMbaseSpace 0;
+  background: @JMmainPageBackground;
+}
+
+// footer
+// --------------------------
+#jm-footer {
+  font-size: 13px;
+  font-weight: 500;
+  color: @JMfooterFontColor;
+  padding: @JMbaseSpace 0;
+  background: @JMfooterBackground;
+  border-top: 6px solid @JMstyle;
+}
+
+#jm-footer-mod {
+  padding: @JMbaseSpace;
+}
+#jm-footer-wrapper {
+	padding: 0 @JMbaseSpace
+}
+// Copyrights
+// --------------------------
+
+#jm-footer-right {
+  text-align: right;
+}
+
+#jm-footer-center {
+  text-align: left;
+}
+
+#jm-footer-left {
+  text-align: left;
+}
+
+#jm-footer-left + #jm-footer-center {
+  text-align: center;
+}
+
+#jm-footer-left, 
+#jm-footer-right, 
+#jm-footer-center {
+  line-height: 30px;
+}
+
+#jm-poweredby a {
+  color: lighten(@JMfooterFontColor, 13.5%);
+}
+
+// back to top
+// --------------------------
+
+#jm-back-top {
+  margin: 0;
+  a {
+    color: darken(@JMfooterFontColor, 17.5%);
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-decoration: none!important;
+    display: inline-block;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      margin-left: -6px;
+      right: auto;
+      background: url('../images/backtotop.png');
+      width: 11px;
+      height: 6px;
+      .transition(all 0.2s ease-in);
+      pointer-events: none;
+    }
+    &:hover:after {
+      top: -25px;
+    }
+  }
+}
+
+// section space
+// --------------------------
+
+#jm-top + #jm-breadcrumbs #jm-breadcrumbs-in,
+#jm-top + #jm-main #jm-main-in,
+#jm-top + #jm-bottom #jm-bottom-in {
+  padding: 0 @JMbaseSpace;
+}
+
+#jm-breadcrumbs + #jm-main #jm-main-in,
+#jm-breadcrumbs + #jm-bottom #jm-bottom-in {
+  padding: 0 @JMbaseSpace;
+}
+
+#jm-main + #jm-bottom #jm-bottom-in {
+  padding: 0 @JMbaseSpace;
+}
+
+// template width in pixels
+// --------------------------
+
+.responsive-disabled-pixels() when(ispixel(@JMfluidGridContainerLg)) {
+  //set min width if responsive is disabled
+  .responsive-disabled {
+    min-width: @JMfluidGridContainerLg;
+    #jm-allpage {
+      padding: 0!important;
+      min-width: @JMfluidGridContainerLg;
+    }
+    &.sticky-bar {
+      #jm-bar-wrapp {
+        position: static!important;
+      }
+    }
+  }
+}
+.responsive-disabled-pixels();
+
+// template width in percentage
+// --------------------------
+
+.responsive-disabled-percentage() when(ispercentage(@JMfluidGridContainerLg)) {
+  @media (max-width: 1170px) {
+    .container-fluid {
+      .box-sizing(border-box);
+      max-width: 100%;
+    }
+  }  
+  //set min width if responsive is disabled
+  .responsive-disabled {
+    min-width: 1200px;
+    #jm-allpage {
+      padding: 0!important;
+      min-width: 1200px;
+    }
+    &.sticky-bar {
+      #jm-bar-wrapp {
+        position: static!important;
+      }
+    }
+  }
+}
+.responsive-disabled-percentage();
+
+// font-switcher
+// --------------------------
+
+.texttoggler {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none!important;
+  margin: 0 1px;
+  display: inline-block;
+}
+
+.texttoggler.small {
+  font-size: 0.8em;
+}
+
+.texttoggler.normal {
+  font-size: 1.1em;
+}
+
+.texttoggler.large {
+  font-size: 1.3em;
+}
+
+.smallview #jm-maincontent {
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+.largeview #jm-maincontent {
+  font-size: 1.1em;
+  line-height: 1.5em;
+}

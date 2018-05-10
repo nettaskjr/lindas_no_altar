@@ -1,0 +1,1 @@
+[23-Jul-2014 06:30:54 CST6CDT] PHP Warning:  constant() [<a href='function.constant'>function.constant</a>]: Couldn't find constant JPATH_ in /home/akdevpax/public_html/jm-beauty-center/libraries/cms/installer/adapter/module.php on line 127

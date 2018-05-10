@@ -1,0 +1,816 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// EDITOR
+//---------------------------------------------------------------
+
+// custom modules
+// --------------------------
+
+//opening-hour
+.jm-opening-hours {
+	.hours {
+		margin: 0;
+	}
+	.buttons {
+		margin: 0;
+		.btn2 {
+			margin: @JMbaseSpace 0 0;
+		}
+		[class*='btn'] {
+			display: block;
+			padding: 18px 30px;
+		}
+	}
+	hr {
+		margin-top: 25px;
+	}
+}
+
+//company
+.jm-company {
+	.logo {
+		margin: 0 0 20px;
+	}
+	.icon {
+		clear: both;
+		margin-right: 30px;
+		img {
+			display: block;
+		}
+	}
+	.desc {
+		margin: 0;
+	}
+	.link {
+		margin: 10px 0 0;
+		display: inline-block;
+	}
+}
+
+//white and dark boxes
+.jm-white-box,
+.jm-dark-box {
+	margin-left: -@JMbaseSpace;
+	&.col1 .jm-box {
+		width: 100%;
+	}
+	&.col2 .jm-box {
+		width: 50%;
+	}
+	&.col3 .jm-box {
+		width: 33.3%;
+	}
+	&.col4 .jm-box {
+		width: 25%;
+	}
+	.jm-box {
+		float: left;
+		.box-sizing(border-box);
+		padding-left: @JMbaseSpace;
+	}
+	a {
+		text-decoration: none;
+		display: inline-block;
+		.transition(all 0.2s linear);
+		-webkit-transform:translateZ(0);
+		background: @JMwhitemsBackground;
+		max-width: 100%;
+	}
+	.description {
+		display: block;
+		text-decoration: none;
+		padding: @JMbaseSpace;
+		border: 1px solid @JMborder;
+		z-index: 1;
+		position: relative;
+	}
+	.title {
+		font-weight: 500;
+		font-size: 40px;
+		line-height: 1.2;
+		display: block;
+		text-transform: uppercase;
+		color: @JMmoduleTitleFontColor;
+	}
+	.subtitle {
+		font-size: 24px;
+		line-height: 1.2;
+		display: block;
+		text-transform: uppercase;
+		color: @JMmoduleTitleFontColor;
+	}
+	.price {
+		color: @JMwhiteBoxPrice;
+		display: block;
+		text-transform: uppercase;
+	}
+	.icon1,
+	.icon2,
+	.icon3, {
+		.description {
+			padding-right: @JMtopBoxIconWidth+(2*@JMbaseSpace);
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				margin-top: -(@JMtopBoxIconHeight/2);
+				right: @JMbaseSpace;
+				left: auto;
+				width: @JMtopBoxIconWidth;
+				height: @JMtopBoxIconHeight;
+			}
+		}
+	}
+	.image {
+		position: relative;
+		display: block;
+		text-align: center;
+		z-index: 2;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			width: 0;
+			height: 5px;
+			.transition(all 0.3s ease-in-out);
+			z-index: 3;
+		}
+	}
+	a:hover .image:after {
+		width: 100%;
+	}
+	a:hover {
+		.scale(1.05);
+	}
+}
+
+//white box
+.jm-white-box {
+	.icon1 .description:after {
+		background: url('../images/@{JMimgDir}/box1.png') no-repeat;
+	}
+	.icon2 .description:after {
+		background: url('../images/@{JMimgDir}/box2.png') no-repeat;
+	}
+	.icon3 .description:after {
+		background: url('../images/@{JMimgDir}/box3.png') no-repeat;
+	}
+	.image:after {
+		background: @JMstyle;
+	}
+}
+
+//dark box
+.jm-dark-box {
+	a {
+		background: @JMdarkmsBackground;
+	}
+	.title {
+		font-size: 24px;
+		color: @JMdarkmsModuleTitle;
+		line-height: 1.1;
+		margin: 0 0 18px;
+	}
+	.description {
+		border: none;
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+	.text {
+		display: block;
+		color: @JMdarkmsText;
+	}
+	.image {
+		&:after {
+			background: @JMstyle;
+			right: 0;
+			left: auto;
+		}
+	}
+	a:hover {
+		.transform(none);
+		background: lighten(@JMdarkmsBackground, 5%);
+	}
+}
+
+//avatar box
+#jm-allpage .jm-avatar-box {
+	margin-left: -@JMbaseSpace;
+	margin-top:-@JMbaseSpace;
+	&.col1 .jm-item {
+		width: 100%;
+	}
+	&.col2 .jm-item {
+		width: 50%;
+	}
+	&.col3 .jm-item {
+		width: 33.3%;
+	}
+	&.col4 .jm-item {
+		width: 25%;
+	}
+	.jm-item {
+		float: left;
+		.box-sizing(border-box);
+		padding-left: @JMbaseSpace;
+		padding-top: @JMbaseSpace;
+		color: @JMbaseFontColor;
+	}
+	.image {
+		float: left;
+		img {
+			.border-radius(50%);
+			border: 1px solid @JMavatarBoxImgBorder!important;
+			margin-right: 25px!important;
+			margin-top: 3px!important;
+			width: auto;
+		}
+	}
+	.title {
+		display: block;
+		font-size: 22px;
+		line-height: 1.1;
+		margin-bottom: 2px;
+		color: @JMmoduleTitleFontColor;
+	}
+	.subtitle {
+		display: block;
+		font-size: 12px;
+		line-height: 1.2;
+		text-transform: uppercase;
+		margin: 0 0 15px;
+	}
+	.text {
+		display: block;
+		font-size: 12px;
+		line-height: 1.5;
+	}
+}
+
+//meet our team
+.jm-meet-our-team {
+	margin-left: -@JMbaseSpace;
+	margin-top: -@JMbaseSpace;
+	&.col1 .jm-box {
+		width: 100%;
+	}
+	&.col2 .jm-box {
+		width: 50%;
+	}
+	&.col3 .jm-box {
+		width: 33.3%;
+	}
+	&.col4 .jm-box {
+		width: 25%;
+	}
+	.jm-box {
+		float: left;
+		.box-sizing(border-box);
+		padding-left: @JMbaseSpace;
+		padding-top: @JMbaseSpace;
+	}
+	.jm-box-in {
+		text-decoration: none;
+		display: inline-block;
+		background: @JMmeetourteamBackground;
+		max-width: 100%;
+	}
+	.image {
+		display: block;
+		position: relative;
+		background: #e5e9eb;
+		text-align: center;
+	}
+	.description {
+		display: block;
+		text-decoration: none;
+		padding: 20px @JMbaseSpace;
+		position: relative;
+	}
+	.title {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 1.1;
+		display: block;
+		text-transform: uppercase;
+		color: @JMmoduleTitleFontColor;
+		margin: 0 0 5px;
+	}
+	.subtitle {
+		font-size: 14px;
+		line-height: 1.1;
+		display: block;
+		color: @JMwhiteBoxPrice;
+	}
+	.social {
+		display: none;
+		width: 156px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		right: auto;
+		margin-top: -25px;
+		margin-left: -78px;
+		.facebook,
+		.twitter,
+		.link {
+			display: block;
+			float: left;
+			margin: 0 1px;
+			width: 50px;
+			height: 50px;
+			background-color: @JMmeetourteamBackgroundHover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			text-decoration: none;
+			.transition(all 0.3s ease-in-out);
+			&:hover {
+				background-color: @JMstyle;
+			}
+		}
+		.facebook {
+			background-image: url('../images/icons/smallsocial/facebook.png');
+		}
+		.twitter {
+			background-image: url('../images/icons/smallsocial/twitter.png');
+		}
+		.link {
+			background-image: url('../images/icons/smallsocial/link.png');
+		}
+	}
+	.jm-box-in:hover {
+		background: @JMmeetourteamBackgroundHover;
+		.title,
+		.subtitle {
+			color: @JMdarkmsModuleTitle;
+		}
+		.social {
+			display: inline-block;
+		}
+		.image img {
+			.opacity(60);
+		}
+	}
+}
+
+//numbers
+.jm-numbers {
+	margin-left: -@JMbaseSpace;
+	margin-top: -@JMbaseSpace;
+	&.col1 .jm-box {
+		width: 100%;
+	}
+	&.col2 .jm-box {
+		width: 50%;
+	}
+	&.col3 .jm-box {
+		width: 33.3%;
+	}
+	&.col4 .jm-box {
+		width: 25%;
+	}
+	.jm-box {
+		float: left;
+		.box-sizing(border-box);
+		padding-left: @JMbaseSpace;
+		padding-top: @JMbaseSpace;
+		text-transform: uppercase;
+	}
+	.number,
+	.text {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.text {
+		text-align: left;
+		padding-left: 15px;
+		color: @JMmoduleTitleFontColor;
+	}
+	.number {
+		margin: 7px 0 0;
+		padding: 9px 0 15px;
+		min-width: 73px;
+		background: #444444;
+		color: @JMwhite;
+		font-size: 50px;
+		font-weight: 300;
+		line-height: 1;
+		text-align: center;
+	}
+	.title {
+		display: block;
+		font-size: 54px;
+		font-weight: bold;
+		line-height: 1;
+	}
+	.subtitle {
+		display: block;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 1.2;
+		margin: 10px 0 0;
+	}
+}
+
+//credits
+#jm-allpage .jm-credits {
+	margin-left: -@JMbaseSpace;
+	margin-top:-@JMbaseSpace;
+	&.col1 .jm-item {
+		width: 100%;
+	}
+	&.col2 .jm-item {
+		width: 50%;
+	}
+	&.col3 .jm-item {
+		width: 33.3%;
+	}
+	&.col4 .jm-item {
+		width: 25%;
+	}
+	.jm-item {
+		float: left;
+		.box-sizing(border-box);
+		padding-left: @JMbaseSpace;
+		padding-top: @JMbaseSpace;
+		min-height: 270px;
+	}
+	.image {
+		display: block;
+	}
+	.author {
+		display: block;
+		margin: 5px 0 0;
+	}
+}
+
+// typography article
+// --------------------------
+
+h3.jm-typo-title {
+	border-bottom: 1px solid @JMborder;
+	padding-bottom: 10px;
+	margin-bottom: 25px 0;
+}
+
+h3.jm-typo-title ~ pre,
+h3.jm-typo-title ~ div pre,
+.jm-code {
+	margin-bottom: @JMbaseSpace;
+	font-size: 13px;
+}
+
+.jm-code {
+	border-left: 5px solid #dddddd;
+	padding: 10px;
+	background: #e7e6e6;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+// color class
+.jm-color {
+	color: @JMstyle;
+}
+
+// numered blocks
+.jm-block {
+	margin: 10px 0;
+	padding: 0 0 0 60px;
+	position: relative;
+	min-height: 40px;
+	span {
+		background: #dddddd;
+		display: block;
+		position: absolute;
+		top: 3px;
+		left: 0;
+		height: 40px;
+		width: 40px;
+		line-height: 40px;
+		text-align: center;
+		.border-radius (50%);
+		font-size: 18px;
+		color: @white;
+	}
+}
+
+.jm-block.second span {
+	background: #2a2a2a;
+	color: #fff;
+}
+
+//quote blocks
+.quote-left,
+.quote-right {
+	display: block;
+	font-style: italic;
+	position: relative;
+	border: 1px solid @JMborder;
+	&:after {
+		content: '';
+		position: absolute;
+		width: 21px;
+		height: 16px;
+	}
+}
+
+.quote-left {
+	padding: 20px 20px 20px 65px;
+	text-align: left;
+	&:after {
+		top: 20px;
+		left: 20px;
+		right: auto;
+		background: url("../images/quote-left.png") no-repeat;
+	}
+}
+
+.quote-right {
+	padding: 20px 65px 20px 20px;
+	text-align: right;
+	&:after {
+		bottom: 20px;
+		left: auto;
+		right: 20px;
+		background: url("../images/quote-right.png") no-repeat;
+	}
+}
+
+//image borders
+.border_img1 {
+	padding: 4px;
+	background: #ececec;
+	.box-sizing(border-box);
+}
+
+.border_img2 {
+	background: @JMwhite;
+	border: 1px solid @JMborder;
+	padding: 5px;
+	.box-sizing(border-box);
+}
+
+.border_img3 {
+	border: 1px solid #DFDFDF;
+	padding: 1px;
+	background: @JMwhite;
+	.box-sizing(border-box);
+}
+
+//colored blocks
+p.blue {
+	border-left: 3px solid #BCE8F1;
+	padding: 0 0 0 10px;
+}
+
+p.green {
+	border-left: 3px solid #D6E9C6;
+	padding: 0 0 0 10px;
+}
+
+p.red {
+	border-left: 3px solid #EED3D7;
+	padding: 0 0 0 10px;
+	color: inherit; // inherit color from body, not from the "red" class
+}
+
+p.bluefill {
+	background: #D9EDF7;
+	border: 1px solid #BCE8F1;
+	display: block;
+	padding: 10px;
+	text-align: justify;
+	color: #3A87AD;
+	.border-radius(5px);
+}
+
+p.greenfill {
+	background: #DFF0D8;
+	border: 1px solid #D6E9C6;
+	display: block;
+	padding: 10px;
+	text-align: justify;
+	color: #468847;
+	.border-radius(5px);
+}
+
+p.redfill {
+	background: #F2DEDE;
+	border: 1px solid #EED3D7;
+	display: block;
+	padding: 10px;
+	text-align: justify;
+	color: #B94A48;
+	.border-radius(5px);
+}
+
+//icon blocks
+p,
+span {
+	&.jmbadge,
+	&.jmcalendar,
+	&.jmchat,
+	&.jmcheck,
+	&.jmcloud,
+	&.jmdirection,
+	&.jmdivide,
+	&.jmerror,
+	&.jmfire,
+	&.jmflag,
+	&.jmheart,
+	&.jmhome,
+	&.jminfo,
+	&.jmlist,
+	&.jmmail,
+	&.jmpeople,
+	&.jmstar,
+	&.jmstat {
+		display: block;
+		padding-left: 60px;
+		background-repeat: no-repeat;
+		background-position: left top;
+		min-height: 40px;
+		margin: 5px 0 15px;
+	}
+	&.jmbadge {
+		background-image: url("../images/icons/badge.png");
+	}
+	&.jmcalendar {
+		background-image: url("../images/icons/calendar.png");
+	}
+	&.jmchat {
+		background-image: url("../images/icons/chat.png");
+	}
+	&.jmcheck {
+		background-image: url("../images/icons/check.png");
+	}
+	&.jmcloud {
+		background-image: url("../images/icons/cloud.png");
+	}
+	&.jmdirection {
+		background-image: url("../images/icons/direction.png");
+	}
+	&.jmdivide {
+		background-image: url("../images/icons/divide.png");
+	}
+	&.jmerror {
+		background-image: url("../images/icons/error.png");
+	}
+	&.jmfire {
+		background-image: url("../images/icons/fire.png");
+	}
+	&.jmflag {
+		background-image: url("../images/icons/flag.png");
+	}
+	&.jmheart {
+		background-image: url("../images/icons/heart.png");
+	}
+	&.jmhome {
+		background-image: url("../images/icons/home.png");
+	}
+	&.jminfo {
+		background-image: url("../images/icons/info.png");
+	}
+	&.jmlist {
+		background-image: url("../images/icons/list.png");
+	}
+	&.jmmail {
+		background-image: url("../images/icons/mail.png");
+	}
+	&.jmpeople {
+		background-image: url("../images/icons/people.png");
+	}
+	&.jmstar {
+		background-image: url("../images/icons/star.png");
+	}
+	&.jmstat {
+		background-image: url("../images/icons/stat.png");
+	}
+}
+
+// ordered lists
+ol.jm-roman,
+ol.jm-roman ol {
+	list-style-type: upper-roman;
+}
+
+ol.jm-alpha,
+ol.jm-alpha ol {
+	list-style-type: lower-alpha;
+}
+
+// social icons
+// --------------------------
+
+.jm-icons {
+	margin: 2px -5px 0;
+	a {
+		display: inline-block;
+		text-decoration: none!important;
+		width: 36px;
+		height: 36px;
+		border: 2px solid @JMsocialItemsBorder;
+		margin-right: 5px;
+		margin-left: 5px;
+		margin-bottom: 10px;
+		.transition(all 0.3s ease-in-out);
+		background-image: url('../images/social.png');
+		background-repeat: no-repeat;
+		&:hover {
+			background-color: @JMstyle;
+		}
+		&:hover {
+			border-color: transparent;
+		}
+	}
+	a.jm-facebook {
+		background-position: 0 0;
+		&:hover {
+			background-position: 0 -36px;
+		}
+	}
+	a.jm-google {
+		background-position: -36px 0;
+		&:hover {
+			background-position: -36px -36px;
+		}
+	}
+	a.jm-linkedin {
+		background-position: -72px 0;
+		&:hover {
+			background-position: -72px -36px;
+		}
+	}
+	a.jm-twitter {
+		background-position: -108px 0;
+		&:hover {
+			background-position: -108px -36px;
+		}
+	}
+	a.jm-skype {
+		background-position: -144px 0;
+		&:hover {
+			background-position: -144px -36px;
+		}
+	}
+	a.jm-pinterest {
+		background-position: -180px 0;
+		&:hover {
+			background-position: -180px -36px;
+		}
+	}
+	a.jm-vimeo {
+		background-position: -216px 0;
+		&:hover {
+			background-position: -216px -36px;
+		}
+	}
+	a.jm-rss {
+		background-position: -252px 0;
+		&:hover {
+			background-position: -252px -36px;
+		}
+	}
+}
+
+// pricing table
+// --------------------------
+
+#jm-allpage table.pricing {
+	float: left;
+	margin: 0 0 @JMbaseSpace;
+	th {
+		background: @JMpricingTableHeadBackground;
+		text-transform: uppercase;
+		font-size: 16px;
+		line-height: 1;
+		font-weight: 500;
+		text-align: center;
+		border-right: 1px solid @JMpricingTableHeadBorder;
+		border-left: 1px solid @JMpricingTableHeadBorder;
+	}
+	td {
+		background: @JMpricingTableBackground;
+		font-size: 13px;
+		border-bottom: 1px solid @JMpricingTableBorder;
+		border-right: 1px solid @JMpricingTableBorder;
+		&:first-child {
+			border-left: 1px solid @JMpricingTableBorder;
+		}
+	}
+	td.item {
+		border-right: none;
+	}
+	td.price {
+		width: 100px;
+		text-align: center;
+		color: @JMstyle;
+	}
+}

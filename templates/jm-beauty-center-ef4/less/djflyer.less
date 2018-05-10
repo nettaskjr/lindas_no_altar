@@ -1,0 +1,182 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// DJFLYER
+//---------------------------------------------------------------
+
+#jm-allpage .djflyer {
+  display: inline-block!important;
+  vertical-align: top;
+}
+
+#jm-allpage .djflyer .djflyer_in {
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: @JMbaseLineHeight;
+  .item_name {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+		color: @JMstyleFlyerItemTitleFontColor;
+  }
+  .item_details {
+    text-transform: uppercase;
+  }
+  .djflyer_box {
+    margin: 0 -(@JMbaseSpace/2);
+  }
+  .djflyer_items_box {
+    .box-sizing(border-box);
+  }
+  .djflyer_cat {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.1;
+    padding: 0;
+    margin: 0 (@JMbaseSpace/2) @JMbaseSpace;
+  }
+  .djflyer_title {
+    padding: 0 (@JMbaseSpace/2) @JMbaseSpace;
+		//overwrite DJ-Flyer settings.
+		width: auto !important;
+    ///
+		img {
+      border: 1px solid @JMflyerImagesBorder;
+      margin: 0 0 25px;
+      .box-sizing(border-box);
+    }
+    &:hover,
+    &.active {
+      .item_name {
+        color: @JMflyerItemTitleFontColorHover;
+        .transition(all 0.2s ease-in);
+      }
+    }
+  }
+  .item_title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: @JMflyerTitleFontColor;
+    margin: 0 0 @JMbaseSpace;
+    span {
+      background: url("../images/flyer-arrow.png") no-repeat left 50%;
+      margin: 0 0 0 5px;
+      padding: 0 0 0 15px;
+    }
+  }
+  .item_tooltip {
+    margin: 0 0 20px;
+  }
+  .item_desc_img {
+    max-width: 100%;
+  }
+  .item_desc_img img {
+    border: 1px solid @JMflyerImagesBorder;
+    .box-sizing(border-box);
+  }
+  .item_desc_img.float_left {
+    margin-right: @JMbaseSpace;
+    margin-bottom: 25px;
+  }
+  .item_desc_img.float_right {
+    margin-left: @JMbaseSpace;
+    margin-bottom: 25px;
+  }
+  .item_desc_img.float_top {
+    margin: 0 0 @JMbaseSpace;
+  }
+  .djflyer_items_box .djflyer_items_box_in {
+    border: none;
+    .box-shadow(none);
+    padding: 0;
+    margin: 0;
+  }
+  .djflyer_titles_box .djflyer_titles_box_in {
+    padding: 0;
+  }
+  .item_link {
+    text-align: right;
+  }
+  .pag_links {
+    text-align: center;
+    padding: 0;
+    span {
+      font-size: 18px;
+      font-weight: 300;
+      color: @JMpaginationColor;
+      height: 36px;
+      width: 36px;
+      line-height: 36px;
+      .transition(all 0.2s ease-in);
+      .opacity(@JMpaginationOpacity);
+      border: 2px solid @JMpaginationColor;
+      background: none;
+      .border-radius(0);
+      margin-right: 10px;
+      &:hover,
+      &.active {
+        .opacity(@JMpaginationOpacityHover);  
+      }
+    }
+  }
+}
+
+#jm-allpage .djflyer.schema_bottom {
+  .djflyer_titles_box_in {
+    overflow: hidden;
+  }
+  .djflyer_title {
+    margin-bottom: 30px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: auto;
+      height: 2px;
+      width: 100%;
+      background: @JMflyerItemLineColor;
+    }
+    &.active:after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      right: auto;
+      margin-left: -5px;
+      width: 8px;
+      height: 8px;
+      border: 2px solid @JMflyerItemLineColor;
+      background: @JMflyerItemLineActiveSquareBackground;
+      .rotate(45deg);
+    }
+  }
+  .pag_links {
+    margin: 0 0 @JMbaseSpace!important;
+  }
+}
+
+#jm-allpage .djflyer.schema_left {
+  .djflyer_items_box {
+    padding-right: @JMbaseSpace;
+  }
+} 
+
+#jm-allpage .djflyer.schema_right {
+  .djflyer_items_box{
+    padding-left: @JMbaseSpace;
+  }
+} 

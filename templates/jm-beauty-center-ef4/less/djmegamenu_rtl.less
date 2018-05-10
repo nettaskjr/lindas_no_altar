@@ -1,0 +1,68 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+
+@import "bootstrap_variables.less";  
+@import "template_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+
+@import "template_mixins.less";
+
+// MEGAMENU RTL
+//---------------------------------------------------------------
+
+#jm-allpage {
+  .dj-megamenu li.dj-up {
+      float: right;
+      margin: 0 1px 0 0;
+  }
+  .dj-megamenu li.dj-up:after {
+      left: auto;
+      right: 0;
+  }
+  .dj-megamenu li a.dj-up_a:after {
+      left: auto;
+      right: 0;
+  }
+  .dj-megamenu li:last-child a.dj-up_a {
+      padding-right: 25px;
+      padding-left: 0;
+  }
+  .dj-megamenu li div.dj-subwrap,
+  .dj-megamenu li:hover div.dj-subwrap li div.dj-subwrap,
+  .dj-megamenu li.hover div.dj-subwrap li div.dj-subwrap {
+      left: auto;
+      right: -9999px;
+  }
+  .dj-megamenu li:hover div.dj-subwrap,
+  .dj-megamenu li.hover div.dj-subwrap {
+      left: auto;
+      right: 0;
+  }
+  .dj-megamenu li:hover div.dj-subwrap li:hover > div.dj-subwrap,
+  .dj-megamenu li.hover div.dj-subwrap li.hover > div.dj-subwrap {
+      left: auto;
+      right: 100%;
+  }
+  .dj-megamenu li ul.dj-submenu > li > a {
+      padding: 10px 0 10px 10px;
+  }
+  .dj-megamenu li ul.dj-submenu > li.parent > a:after {
+      right: auto;
+      left: 0;
+  }
+  .dj-megamenu li a span.image-title {
+      margin: 0 15px 0 0;
+  }
+  .dj-megamenu li ul.dj-subtree {
+      padding: 0 10px 0 0;
+  }
+}

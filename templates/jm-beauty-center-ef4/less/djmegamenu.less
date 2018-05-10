@@ -1,0 +1,371 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+
+@import "bootstrap_variables.less";  
+@import "template_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+
+@import "template_mixins.less";
+
+// MEGAMENU
+//---------------------------------------------------------------
+
+.dj-megamenu {
+  margin: 0;
+  position: relative;   
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  z-index: 500;
+  font-family: @JMtopmenuFontFamily;
+}
+
+.dj-megamenu {
+  li.dj-up {
+    position: relative;
+    display: block;
+    float: left;
+    padding: 0 0 22px;
+    margin: 0 0 0 1px;
+    &:hover,
+    &.hover,
+    &.active {
+      &:after {
+        background: @JMstyle;
+      }
+    }
+  }
+  li.dj-up:after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 100%;
+    bottom: -21px;
+    left: 0;
+    right: auto;
+    .transition(all 0.2s ease-out 0s);
+    pointer-events: none;
+    z-index: 301;
+  }
+  li {
+    a.dj-up_a {
+      font-size: @JMtopmenuFontSize;
+      font-weight: 400;
+      text-transform: uppercase;
+      display: block;
+      text-decoration: none;
+      padding: 0 25px;
+      line-height: 1;
+      cursor: pointer;
+      color: @JMmegamenuFontColor;
+      position: relative;
+      .transition(all 0.2s ease-out 0s);
+      text-align: center;
+      letter-spacing: 1px;
+      span {
+        display: block;
+      }
+      span.dj-drop {
+        position: relative;
+        z-index: 201;
+      }
+      small.subtitle {
+        display: block;
+        font-size: @JMmegamenuSubTitleFontSize;
+        line-height: 1;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+    }
+    &:hover,
+    &.hover,
+    &.active {
+      a.dj-up_a {
+        color: @JMstyleMegamenuFontHover;
+      }
+    }
+    a.dj-up_a:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: auto;
+      top: 2px;
+      height: 10px;
+      width: 1px;
+      background: @JMmegamenuBorder;
+    }
+  }
+  li:first-child {
+    a.dj-up_a:after {
+      display: none;
+    }
+  }
+  li:last-child {
+    a.dj-up_a {
+      padding-right: 0;
+    }
+  }
+  li.separator {
+    & > a {
+      cursor: default;
+    }
+  }
+}
+
+.dj-megamenu.hasSubtitles {
+  li.dj-up {
+    padding: 0 0 12px;
+    min-height: 23px;
+  }
+}
+
+.dj-megamenu li.dj-up:hover:after,
+.dj-megamenu li.dj-up.active:after {
+  height: 3px;
+}
+
+// default listing
+.dj-megamenu li:hover,.dj-megamenu li.hover {
+    position: relative;
+    z-index: 200;
+}
+
+// sticky
+.dj-megamenu-sticky {
+  background: @JMmegamenuBackground;
+  border-bottom: 1px solid @JMstyleStickyMenuBorder;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+
+.dj-megamenu .dj-stickylogo {
+	&.dj-align-center {
+		text-align: center;
+		margin: 10px;
+	}
+	&.dj-align-left {
+		text-align: left;
+		margin: 10px;
+	}
+	&.dj-align-right {
+		text-align: right;
+		margin: 10px;
+	}
+}
+
+//select
+#jm-allpage .select-input .dj-select {
+	margin: 0!important;
+	font-size: 1em!important;
+	padding: 8px!important;
+}
+
+// Hide submenus
+.dj-megamenu li div.dj-subwrap,
+.dj-megamenu li:hover div.dj-subwrap li div.dj-subwrap,
+.dj-megamenu li.hover div.dj-subwrap li div.dj-subwrap {
+  position: absolute;
+  left: -9999px;
+  right: auto;
+  top: -9999px;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
+
+// Show first level submenu
+.dj-megamenu li:hover div.dj-subwrap,
+.dj-megamenu li.hover div.dj-subwrap {
+  left: 0;
+  right: auto;
+  top: 35px;
+  height: auto;
+  z-index: 300;
+  .box-sizing(border-box);
+  border-top: 20px solid transparent;
+}
+
+// width if one column
+.dj-megamenu li:hover div.dj-subwrap.single_column,
+.dj-megamenu li.hover div.dj-subwrap.single_column {
+  width: auto!important;
+}
+
+// Show higher level submenus
+.dj-megamenu li:hover div.dj-subwrap li:hover & > div.dj-subwrap,
+.dj-megamenu li.hover div.dj-subwrap li.hover & > div.dj-subwrap {
+  left: 100%;
+  right: auto;
+  top: -16px;
+  margin: 0;
+  height: auto;
+  z-index: 400;
+  border: none;
+  box-shadow: none;
+  border-top: 0;
+}
+.dj-megamenu li:hover div.dj-subwrap-in,
+.dj-megamenu li.hover div.dj-subwrap-in {
+  display: inline-block;
+  background: @JMmegamenuBackground;
+  border: 1px solid @JMmegamenuSubmenuBorder;
+}
+
+// Submenu elements styles - drop down
+.dj-megamenu {
+  li {
+    .dj-subwrap-in {
+      display: table;
+    }
+    div.dj-subcol {
+      .box-sizing(border-box);
+      display: table-cell;
+      height: 100%;
+    }
+    ul.dj-submenu {
+      padding: 15px 0;
+      margin: 0;
+      color: @JMmegamenuFontColor;
+      & > li {
+        display: block;
+        position: relative;
+        padding: 0 25px;
+        &:hover,
+        &.hover,
+        &.active {
+          & > a {
+            color: @JMstyleMegamenuSubmenuActiveFontColor;
+          }
+        }
+        & > a {
+          display: block;
+          line-height: 15px;
+          text-decoration: none;
+          padding: 10px 10px 10px 0;
+          color: @JMmegamenuSubmenuFontColor;
+          font-size: 13px;
+          small.subtitle {
+            display: block;
+            font-size: @JMmegamenuSubTitleFontSize;
+            line-height: 1em;
+            font-weight: 300;
+            text-transform: uppercase;
+            opacity: 0.4;
+          }
+        }
+      }
+      & > li.parent {
+        & > a {
+          position: relative;
+        }
+        & > a:after {
+          content: '+';
+          font-family: Arial, Helvetica, sans-serif;
+          position: absolute;
+          line-height: 1;
+          top: 11px;
+          right: 0;
+          left: auto;
+        }
+      }
+    }
+  }
+}
+
+// image menu
+.dj-megamenu {
+  li {
+    a {
+      span.image-title {
+        margin: 0 0 0 15px;
+        display: inline-block;
+        float: none;
+        vertical-align: middle;
+      }
+    }
+    a.dj-up_a {
+      img {
+        max-height: 30px;
+        max-width: none;
+        vertical-align: middle;
+      }
+    }
+    ul.dj-submenu {
+      & > li {
+        & > a {
+          img {
+            max-height: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Submenu elements styles - tree
+.dj-megamenu {
+  li {
+    ul.dj-subtree {
+      list-style: none outside;
+      padding: 0 0 0 10px;
+      margin: 0;
+      & > li {
+        &:hover,
+        &.hover,
+        &.active {
+          & > a {
+            color: @JMstyleMegamenuSubmenuActiveFontColor;
+          }
+        }
+        & > a {
+          display: block;
+          line-height: 15px;
+          text-decoration: none;
+          padding: 8px 10px;
+          color: @JMmegamenuSubmenuFontColor;
+          font-size: @JMmegamenuSubmenuFontSize;
+          small.subtitle {
+            display: block;
+            font-size: @JMmegamenuSubTitleFontSize;
+            line-height: 1em;
+            font-weight: 300;
+            text-transform: uppercase;
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+  }
+}
+
+// modules loaded into menu
+.dj-megamenu {
+  .modules-wrap {
+    padding: 10px 0;
+    .moduletable {
+      margin: 30px 0 0;
+      font-size: @JMmegamenuModuleFontSize;
+      & > h3 {
+        color: @JMmegamenuSubmenuModuleTitle;
+        font-size: @JMmegamenuModuleHeaderFontSize !important;
+        line-height: 1.1;
+        font-weight: 500;
+        margin: 0 0 25px;
+        text-transform: uppercase;
+      }
+    }
+    .moduletable:first-child {
+      margin: 0;
+    }
+  }
+}

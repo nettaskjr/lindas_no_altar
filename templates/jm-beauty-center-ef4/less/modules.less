@@ -1,0 +1,399 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// MODULES
+//---------------------------------------------------------------
+
+.span0 {
+  float: none !important;
+} 
+
+.span50 {
+  float: left !important;
+  width: 50% !important;
+}
+
+// default modules
+// --------------------------
+
+.jm-module {
+  margin-bottom: @JMbaseSpace;
+  .jm-title {
+    line-height: 1.2;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+    padding: 0 0 20px;
+    position: relative;
+    color: @JMmoduleTitleFontColor;
+    font-family: @JMmoduleTitleFontFamily;
+    font-size: @JMmoduleTitleFontSize;
+    letter-spacing: 3px;
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      right: auto;
+      height: 5px;
+      width: 100%;
+      background: url('../images/border.png');
+    }
+  }
+}
+
+#jm-header {
+  .jm-module {
+    .jm-title {
+      color: @JMheaderModuleTitle;  
+    }
+  }
+}
+
+.moduletable {
+  margin: 0 0 @JMbaseSpace;
+  > h3 {
+    margin: 0 0 20px;
+    color: @JMmoduleTitleFontColor;
+  }
+}
+
+// jmmoduleraw
+.jm-module-raw {
+  float: right;
+  margin-left: 20px;
+}
+
+.jm-module-raw:last-child {
+  margin-left: 0;
+}
+
+// dark-ms
+// --------------------------
+
+.jm-module.dark-ms {
+  .jm-module-in {
+    background: @JMdarkmsBackground;
+    padding: 30px;
+    color: @JMdarkmsText;
+  }
+  .jm-title {
+    color: @JMdarkmsModuleTitle;
+    padding: 0;
+    margin: 0 0 25px;
+    line-height: 1.1;
+    &:after {
+      display: none;
+    }
+  }
+}
+
+// white-ms
+// --------------------------
+
+.jm-module.white-ms {
+  .jm-module-in {
+    background: @JMwhitemsBackground;
+    padding: 30px;
+    border: 1px solid @JMwhitemsBorder;
+    .box-sizing(border-box);
+    color: @JMwhitemsText;
+  }
+  .jm-title {
+    color: @JMwhitemsModuleTitle;
+    padding: 0;
+    margin: 0 0 25px;
+    line-height: 1.1;
+    &:after {
+      display: none;
+    }
+  }
+}
+
+//footer
+#jm-footer {
+  .jm-title {
+    color: @JMfooterModuleTitle;
+    &:after {
+      background: url('../images/border-light.png');
+    }
+  }
+}
+
+//offcanvas
+#jm-offcanvas {
+  .jm-title {
+    color: @JMoffcanvasModuleTitle;
+    &:after {
+      background: url('../images/border-light.png');
+    }
+  }
+}
+
+// small-title-ms
+// --------------------------
+
+.jm-module.small-title-ms {
+  .jm-title {
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    padding: 0;
+    margin: 0 0 25px;
+    &:after {
+      display: none;
+    }
+  }
+}
+
+// jm-hr
+// --------------------------
+
+p.jm-hr {
+  margin: 0;
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: url('../images/border.png');
+}
+
+#jm-offcanvas,
+#jm-footer,
+.dark-ms{
+  p.jm-hr {
+    background: url('../images/border-light.png');
+  } 
+}
+
+// margin-ms
+// --------------------------
+
+#jm-allpage .jm-module.margin-ms {
+  margin: 0;
+}
+
+// bottom-margin-ms
+// --------------------------
+
+#jm-allpage .jm-module.bottom-margin-ms {
+  margin-bottom: 0;
+}
+
+// side-margin-ms
+// --------------------------
+
+#jm-allpage .jm-module.side-margin-ms {
+  margin-left: -@JMbaseSpace;
+}
+
+// header modules
+// --------------------------
+
+#jm-header {
+  .jm-module {
+    margin: @JMbaseSpace;
+  }
+  .jm-module + .jm-module {
+    margin: 0 @JMbaseSpace @JMbaseSpace;
+  }
+}
+
+#jm-header .jm-module.header-ms {
+  margin: 0 0 -(@JMheaderOverlapHeight);
+}
+
+// latest news module
+// --------------------------
+
+//article category
+.category-module {
+  margin: -(@JMbaseSpace) -(@JMbaseSpace /2);
+  li {
+    background-image: none;
+    line-height: 1.1;
+    padding: @JMbaseSpace (@JMbaseSpace /2) 0;
+		float: left;
+		.box-sizing(border-box);
+		width: 100%;
+    p {
+      line-height: @JMbaseLineHeight;
+    }
+  }
+  li > a {
+    display: block;
+    font-weight: normal;
+  }
+  .mod-articles-category-title {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: @JMmoduleTitleFontColor;
+    text-decoration: none;
+    &:hover {
+      color: @JMstyleLink;
+    }
+  }
+  .mod-articles-category-date {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .mod-articles-category-introtext {
+    margin-top: 20px;
+  }
+}
+
+.col2 .category-module {
+  li {
+    width: 50%;
+  }
+}
+
+.col3 .category-module {
+  li {
+    width: 33.3%;
+  }
+}
+
+.col4 .category-module {
+  li {
+    width: 25%;
+  }
+}
+
+//dark-ms
+.dark-ms .category-module {
+  .mod-articles-category-title {
+    color: @JMdarkmsModuleTitle;
+    &:hover {
+    	color: @JMstyleLink;
+    }
+  }
+}
+
+//footer
+#jm-footer .category-module {
+  .mod-articles-category-title {
+    color: @JMfooterModuleTitle;
+    &:hover {
+      color: @JMstyleLink;
+    }
+  }
+}
+
+//offcanvas
+#jm-offcanvas .category-module {
+  .mod-articles-category-title {
+    color: @JMoffcanvasModuleTitle;
+    &:hover {
+      color: @JMstyleLink;
+    }
+  }
+}
+
+.category-module.nav.menu {
+  .mod-articles-category-title {
+    text-transform: none;
+    letter-spacing: normal;
+  }
+}
+
+#jm-djmenu {
+  .mod-articles-category-title {
+    font-size: 12px;
+    line-height: 1;
+  }
+  .category-module {
+    margin: -10px 0 0;
+    li {
+      padding: 10px 0 0;
+    }
+    .mod-articles-category-introtext {
+      margin-top: 10px;
+    }
+  }
+}
+
+.popular-ms .category-module {
+  margin: 0;
+  li {
+    padding: 10px 0 0;
+    margin: 10px 0 0;
+    background-repeat: repeat-x;
+    background-position: left top;
+    background-image: url('../images/menu-border-bg.png');
+    &:first-child {
+      background: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .mod-article-image {
+    float: left;
+    display: table;
+    margin-right: 15px;
+    img {
+      max-width: 100px;
+      padding: 4px;
+      border: 1px solid @JMborder;
+    }
+  }
+  .mod-articles-category-title {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-transform: none;
+    margin: 5px 0 0;
+  }
+  .mod-articles-category-date {
+   font-size: 13px;
+   text-transform: none;
+   display: block; 
+  }
+  .mod-articles-category-introtext {
+    margin: 5px 0 0;
+  }
+}
+
+// contact page
+// --------------------------
+
+.contact-ps {
+  h3, 
+  form#contact-form > fieldset > legend,
+  > .contact-address.dl-horizontal {
+    display: none !important;
+  }
+  > h3:first-child {
+    display: block !important;
+    font-size: 30px;
+    line-height: 1.1;
+    font-weight: 500;
+    color: @JMarticleTitleFontColor;
+    margin: 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .form-horizontal .control-label {
+    float: none;
+    width: auto;
+    text-align: inherit;
+    padding: 0;
+    label {
+      margin: 0 0 10px;
+    }
+  }
+  .form-horizontal .controls {
+    margin: 0;
+  }
+  .form-actions {
+    background: none;
+    border: none;
+    padding: 0;
+  }  
+}

@@ -1,0 +1,588 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+   
+@import "template_variables.less";
+@import "bootstrap_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less-ext/mixins-ext.less"; //JM extended mixins
+@import "template_mixins.less";
+
+// TEMPLATE RTL
+//---------------------------------------------------------------
+
+// layout.less
+// --------------------------  
+
+//sticky
+.sticky-bar #jm-bar-wrapp {
+  right: auto;
+  left: 0;
+}
+
+#jm-bar-left {
+	padding-left: @JMbaseSpace;
+	padding-right: 0;
+}
+
+#jm-font-switcher {
+  text-align: left;
+}
+
+//copyrights
+#jm-footer-center {
+  text-align: right;
+}
+
+#jm-footer-right {
+  text-align: left;
+}
+
+#jm-footer-left {
+  text-align: right;
+}
+
+// joomla.less
+// --------------------------  
+
+// BOOTSTRAP
+//---------------------------------------------------------------
+  
+//chosen
+#jm-allpage .chzn-container .chzn-drop,
+#jm-allpage .chzn-container-single.chzn-container-single-nosearch .chzn-search {
+  left: auto;
+  right: -9999px;
+}
+
+#jm-allpage .chzn-container.chzn-with-drop .chzn-drop {
+  left: auto;
+  right: 0;
+}
+
+//chzn
+#jm-allpage {
+  .chzn-container-multi .chzn-choices li {
+    float: right;
+  }
+  .chzn-container-single .chzn-single span {
+    margin-right: 0;
+    margin-left: 26px;
+  }
+  .chzn-container-single .chzn-single div {
+    right: auto;
+    left: 8px;
+  }
+}
+
+// JOOMLA COMPONENT
+//---------------------------------------------------------------
+
+//rating and voting
+.content_vote label {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+//article details
+dl.article-info {
+  dd {
+    margin: 0 0 0 3px;
+    padding: 0 0 0 14px;
+    &:after {
+      left: 0;
+      right: auto;
+    }
+  }
+}
+
+.article-info a {
+  display: inline-block;
+}
+
+//article categories
+.categories-list .collapse {
+  padding: 0 (@JMbaseSpace - 10) 0 0;
+}
+
+//category blog
+//article separator
+.pull-left.item-image,
+figure.pull-left {
+  margin-right: 0;
+  margin-left: (@JMbaseSpace - 10);
+}
+
+.pull-right.item-image,
+figure.pull-right {
+  margin-left: 0;
+  margin-right: (@JMbaseSpace - 10);
+}
+  
+p.readmore,
+p.mod-articles-category-readmore {
+  text-align: left;
+}
+
+p.readmore a,
+a.readmore,
+#jm-allpage .mod-articles-category-readmore a {
+  &:after {
+    left: auto;
+    right: 0;
+  }
+  &:before {
+    left: auto;
+    right: 0;
+  }
+}
+
+//featured contact 
+table.category {
+  th, 
+  td {
+    text-align: right;
+  }
+}
+
+//contact single category
+.contact-category {
+  .btn-group span.label {
+    margin-right: 0;
+    margin-left: 10px;
+    display: inline-block;
+  }
+}
+
+//weblinks single category
+.weblink-category {
+  .btn-group span.label {
+    margin-right: 0;
+    margin-left: 10px;
+    display: inline-block;
+  }
+  dt,
+  dd {
+    float: right;
+  }
+}
+
+//news feed categories
+.newsfeed-count {
+  dt,
+  dd {
+    float: right;
+  }
+}
+
+//news feed category
+.newsfeed-category .btn-group span.label {
+  margin-right: 0;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+//tag-category
+.tag-category {
+  .form-inline label {
+    margin-right: 0;
+    margin-left: 10px;
+  } 
+}
+
+
+//single contact
+.contact-position,
+.contact-address {
+  .jicons-text {
+    margin-right: 0;
+    margin-left: 10px;
+    text-align: right;
+  }
+  .jicons-icons {
+    margin-right: 0;
+    margin-left: 10px;
+    text-align: right;
+  }
+}
+
+//search component
+.phrases-box,
+fieldset.only {
+  label {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+}
+
+//joomla tooltip
+body .tip-wrap {
+  .tip-top {
+    left: auto;
+    right: 20%;
+    margin-left: 0;
+    margin-right: -5px;
+  }
+}
+
+//article index
+.article-index {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+table.category {
+  th, 
+  td {
+    text-align: right;
+  }
+}
+
+//color picker
+#jm-allpage .minicolors-theme-bootstrap .minicolors-input {
+  padding: 5px 12px 5px 0!important;
+}
+
+#jm-allpage .minicolors-theme-bootstrap .minicolors-swatch {
+  right: 0!important;
+  left: auto!important;
+}
+
+// JOOMLA MODULES
+//---------------------------------------------------------------
+
+//newsflash module
+.newsflash {
+  .readmore {
+    float: left;
+  }
+}
+
+//search module
+.form-search {
+  label.finder {
+    padding: 0 0 0 10px;
+  }
+}
+
+// menus.less
+// --------------------------  
+
+.nav.menu {
+  > li > ul {
+    background-position: right bottom;
+  }
+  > li > a,
+  > li > span.separator {
+    background-position: right bottom;
+  }  
+  > li.parent > a,
+  > li.parent > span.separator {
+    padding-right: 0;
+    padding-left: 10px;
+    &:after {
+      right: auto;
+      left: 0; 
+    }
+  }
+  .nav-child{
+    > li {
+      padding-left: 0;
+      padding-right: 20px;
+      background-position: right 18px;
+      background-image: url('../images/menu-arrow_RTL.png');
+      &:hover,
+      &.active {
+        background-image: url('../images/@{JMimgDir}/menu-arrow_RTL.png');
+      }
+    }
+  }
+  li a img {
+    margin: 0 0 0 15px;
+  }
+}
+
+//megamenu menu
+.dj-megamenu .nav.menu {
+  > li.parent > a,
+  > li.parent > span.separator {
+    padding-right: 0;
+    padding-left: 15px;
+  }
+  > li.parent > a:after,
+  > li.parent > span.separator:after {
+    left: 0;
+    right: auto;
+  }
+  .nav-child > li {
+    background-position: right 18px;
+  }
+}
+
+//top-bar menu
+#jm-top-bar .nav.menu {
+  > li > a,
+  > li > span.separator {
+    padding: 0 10px 0 0;
+    margin: 0 10px 0 0;
+    &:before {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+//classic-ms
+.nav.menu.classic-ms {
+  .nav-child > li {
+    padding-left: 0;
+    padding-right: 20px;
+  }
+}
+
+// modules.less
+// --------------------------  
+
+.span50 {
+  float: right !important;
+}
+
+// jmmoduleraw
+.jm-module-raw {
+  float: left;
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+.jm-module {
+  .jm-title {
+    &:after {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+// logout topbar
+#jm-top-bar {
+  .logout-button .btn {
+    margin-left: 0!important;
+    margin-right: 10px!important;
+  }
+}
+
+#jm-allpage .jm-module.side-margin-ms {
+  margin-left: 0;
+  margin-right: -@JMbaseSpace;
+}
+
+//article category
+.category-module {
+  li {
+		float: right;
+	}
+}
+
+.popular-ms .category-module {
+  .mod-article-image {
+    float: right;
+    margin-right: 0;
+    margin-left: 15px;
+  }
+}
+
+// editor.less
+// --------------------------  
+
+//custom styles
+.jm-company {
+  .icon {
+    margin-right: 0;
+    margin-left: 30px;
+  }
+}
+
+.jm-white-box,
+.jm-dark-box {
+  margin-left: 0;
+  margin-right: -@JMbaseSpace;
+  .jm-box {
+    float: right;
+    padding-left: 0;
+    padding-right: @JMbaseSpace;
+  }
+  .icon1,
+  .icon2,
+  .icon3, {
+    .description {
+      padding-right: @JMbaseSpace;
+      padding-left: @JMtopBoxIconWidth+(2*@JMbaseSpace);
+      &:after {
+        right: auto;
+        left: @JMbaseSpace;
+      }
+    }
+  }
+  .image {
+    &:after {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+.jm-dark-box {
+  .image {
+    &:after {
+      right: auto;
+      left: 0;
+    }
+  }
+}
+
+#jm-allpage .jm-avatar-box {
+  margin-left: 0;
+  margin-right: -@JMbaseSpace;
+  .jm-item {
+    float: right;
+    padding-left: 0;
+    padding-right: @JMbaseSpace;
+  }
+  .image {
+    float: right;
+    img {
+      margin-right: 0!important;
+      margin-left: 25px!important;
+    }
+  }
+}
+
+.jm-meet-our-team {
+  margin-left: 0;
+  margin-right: -@JMbaseSpace;
+  .jm-box {
+    float: right;
+    padding-left: 0;
+    padding-right: @JMbaseSpace;
+  }
+  .social {
+    .facebook,
+    .twitter,
+    .link {
+      float: right;
+    }
+  }
+}
+
+.jm-numbers {
+  margin-left: 0;
+  margin-right: -@JMbaseSpace;
+  .jm-box {
+    float: right;
+    padding-left: 0;
+    padding-right: @JMbaseSpace;
+  }
+  .text {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 15px;
+  }
+}
+
+#jm-allpage table.pricing {
+  float: right;
+  td {
+    border: none;
+    border-left: 1px solid @JMpricingTableBorder;
+    &:first-child {
+      border-right: 1px solid @JMpricingTableBorder;
+    }
+  }
+  td.item {
+    border-right: 1px solid @JMpricingTableBorder;
+    border-left: none;
+  }
+}
+
+.jm-icons {
+  a {
+    margin-right: 0;
+    margin-left: 10px;
+    &:last-child {
+      margin-left: 0;
+    }
+  }
+}
+
+
+//colored blocks
+p.blue {
+  border-right: 3px solid #BCE8F1;
+  border-left: none;
+  padding: 0 10px 0 0;
+}
+
+p.green {
+  border-right: 3px solid #D6E9C6;
+  border-left: none;
+  padding: 0 10px 0 0;
+}
+
+p.red {
+  border-right: 3px solid #EED3D7;
+  border-left: none;
+  padding: 0 10px 0 0;
+  color: inherit; // inherit color from body, not from the "red" class
+}
+
+.jm-block {
+  padding: 0 60px 0 0;
+  span {
+    left: auto;
+    right: 0;
+  }
+}
+
+p.jmbadge,
+p.jmcalendar,
+p.jmchat,
+p.jmcheck,
+p.jmcloud,
+p.jmdirection,
+p.jmdivide,
+p.jmerror,
+p.jmfire,
+p.jmflag,
+p.jmheart,
+p.jmhome,
+p.jminfo,
+p.jmlist,
+p.jmmail,
+p.jmpeople,
+p.jmstar,
+p.jmstat {
+  padding-left: 0;
+  padding-right: 60px;
+  background-position: right top;
+}
+
+// EXTENSIONS import
+//---------------------------------------------------------------
+
+//import extended DJ-Megamenu styles
+@import "djmegamenu_rtl.less";
+
+//import extended DJ-Mediatools styles
+@import "djmediatools_rtl.less";
+
+//import extended DJ-Flyer styles
+@import "djflyer_rtl.less";

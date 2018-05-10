@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addfieldpath="/administrator/components/com_flyer/models/fields">
+	<fieldset>
+		<field name="id"
+			type="text"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description="JGLOBAL_FIELD_ID_DESC"
+			size="10"
+			default="0"
+			readonly="true"
+			class="readonly"
+		/>
+		
+		<field 
+		    name="cat_id" 
+		    type="sql" 
+		    default=""
+		    label="Select category"
+		    query="SELECT * FROM #__djflyer_categories" 
+		    key_field="id" 
+		    value_field="name" 
+		/>
+		<!--
+		<field name="cat_id"
+			type="category"
+			extension="com_djimageslider"
+			label="JCATEGORY"
+			description="JFIELD_CATEGORY_DESC"
+			class="inputbox"
+			required="true"
+		/>
+		  -->
+		<field name="name"
+			type="text"
+			label="JGLOBAL_TITLE"
+			description="JGLOBAL_TITLE"
+			class="inputbox"
+			size="30"
+			required="true"
+		 />
+		 
+		 <field name="tooltip"
+			type="text"
+			label="COM_DJFLYER_TOOLTIP"
+			description="COM_DJFLYER_TOOLTIP"
+			class="inputbox"
+			size="30"
+		 />
+		 
+		 <field name="details"
+			type="text"
+			label="COM_DJFLYER_DETAILS"
+			description="COM_DJFLYER_DETAILS"
+			class="inputbox"
+			size="30"
+		 />
+		 
+		 <field name="del_article" 
+				type="modal_article"
+				label="COM_DJFLYER_ARTICLE" 
+				description="COM_DJFLYER_ARTICLE"
+			/>
+		 
+		 <field name="icon" 
+		 type="file" 
+		 label="COM_DJFLYER_IMAGE" 
+		 description="COM_DJFLYER_IMAGE" 
+		 size="10" 
+		 accept="image/*" 
+		 /> 
+		 <field name="descimg" 
+		 type="file" 
+		 label="COM_DJFLYER_IMAGE" 
+		 description="COM_DJFLYER_IMAGE" 
+		 size="10" 
+		 accept="image/*" 
+		 />
+		<!--
+		<field name="icon_url"
+			type="media"
+			hide_none="1"
+			label="COM_DJFLYER_IMAGE"
+			description="COM_DJFLYER_IMAGE"
+		/>
+		-->
+		<!--
+		<field name="image_url"
+			type="media"
+			hide_none="1"
+			label="COM_DJFLYER_IMAGE"
+			description="COM_DJFLYER_IMAGE"	
+		/>
+		-->
+		<field name="description" type="editor"
+			label="COM_DJFLYER_DESCRIPTION"
+			description="COM_DJFLYER_DESCRIPTION_DESC"
+			class="inputbox"
+			filter="safehtml"
+			buttons="false"
+		/>
+		
+		<field name="published" 
+		type="radio" 
+		default="1" 
+		label="COM_DJFLYER_PUBLISHED" 
+		description="">
+		  <option value="1">Yes</option>
+		  <option value="0">No</option>
+		</field>
+		<!--
+		<field
+			name="published"
+			type="list"
+			label="JSTATUS"
+			description="COM_DJFLYER_PUBLISHED"
+			class="inputbox"
+			size="1"
+			default="1"
+		>
+			<option value="1">
+				JPUBLISHED</option>
+			<option value="0">
+				JUNPUBLISHED</option>			
+		</field> 
+		-->
+			<field 
+			name="icon_url" 
+			type="hidden" 
+			default="" 
+			/>
+			<field 
+			name="image_url" 
+			type="hidden" 
+			default="" 
+			/>
+			<field 
+			name="id" 
+			type="hidden" 
+			default="" 
+			/>
+			<field 
+			name="ordering" 
+			type="hidden" 
+			default="" 
+			/>
+			<field 
+			name="task" 
+			type="hidden" 
+			default="" 
+			/>
+			<field 
+			name="boxchecked" 
+			type="hidden" 
+			default="0" 
+			/>
+	</fieldset>
+
+</form>

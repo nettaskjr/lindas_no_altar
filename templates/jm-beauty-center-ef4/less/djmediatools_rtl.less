@@ -1,0 +1,124 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// MEDIATOOLS RTL
+//---------------------------------------------------------------
+
+// Album View
+
+#djmediatools a.dj-category {
+  float: right!important;
+}
+
+.dj-galleryGrid .dj-slide {
+  float: right!important;
+}
+
+// readmore
+
+#jm-allpage .dj-readmore-wrapper {
+  a {
+    &:after {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+.djslider {
+  direction: ltr !important;
+}
+
+.djslider .navigation-container-custom {
+  direction: rtl !important;
+}
+
+.dj-slideshowThumbs {
+  .dj-indicators-in {
+    left: auto !important;
+    right: 0 !important;
+  }
+  .dj-load-button {
+    float: right !important;
+  }
+}
+
+.dj-tabber {
+  .dj-tab {
+    padding: 0 0 0 10px!important;
+  }
+}
+
+.box_skitter .info_slide {
+  left: auto;
+  right: 15px;
+}
+
+.box_skitter .info_slide .image_number {
+  float: right!important;
+  margin: 0 0 0 10px!important;
+}
+
+// testimonials-ms
+
+#jm-allpage .testimonials-ms {
+  .jm-custom-text {
+    padding: 25px 50px 25px 40px;
+    text-align: right;
+    &:before {
+      left: auto;
+      right: 25px;
+      background: url('../images/testimonials_RTL.png');
+    }
+    &:after {
+      right: auto;
+      left: 30px;
+    }
+  }
+  .jm-custom-title {
+    text-align: left;
+  }
+  .jm-custom-subtitle {
+    text-align: left;
+  }
+  .navigation-container-custom {
+    right: auto;
+    left: 10px;
+  }
+}
+
+#jm-allpage .testimonials-ms.right {
+  .jm-custom-text {
+    padding: 25px 40px 25px 50px;
+    text-align: left;
+    &:before {
+      left: 25px;
+      right: auto;
+      background: url('../images/testimonials.png');
+    }
+    &:after {
+      right: 30px;
+      left: auto;
+    }
+  }
+  .jm-custom-title {
+    text-align: right;
+  }
+  .jm-custom-subtitle {
+    text-align: right;
+  }
+  .navigation-container-custom {
+    right: 10px;
+    left: auto;
+  }
+}
+
+#jm-allpage .team-ms {
+  .dj-slide-desc-text {
+    text-align: right!important;
+  }
+}

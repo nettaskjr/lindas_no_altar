@@ -1,0 +1,225 @@
+/*
+* @version 1.3 RC1
+* @package DJ Flyer
+* @subpackage DJ Flyer Module
+* @copyright Copyright (C) 2010 Blue Constant Media LTD, All rights reserved.
+* @license http://www.gnu.org/licenses GNU/GPL
+* @author url: http://design-joomla.eu
+* @author email contact@design-joomla.eu
+* @developer Ĺ�ukasz Ciastek - lukasz.ciastek@design-joomla.eu
+*
+*
+* DJ Flyer is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* DJ Flyer is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with DJ Flyer. If not, see <http://www.gnu.org/licenses/>.
+*
+*/
+
+.djflyer_in {
+	line-height: 130%;
+	padding: 20px 0;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #e8e8e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e8e8e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#e8e8e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#e8e8e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#e8e8e8 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#e8e8e8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+	border: 1px solid #c5c5c5;
+}
+
+.djflyer.schema_right .djflyer_titles_box {
+	float: left;
+}
+
+.djflyer.schema_right .djflyer_titles_box .djflyer_titles_box_in {
+	padding: 0 0 0 20px;
+}
+
+.djflyer.schema_right .djflyer_items_box {
+	float: left;
+}
+
+.djflyer.schema_right .djflyer_items_box_in {
+	padding: 0 20px;
+	box-shadow: -1px 0 0 #ffffff;
+	-webkit-box-shadow: -1px 0 0 #ffffff;
+	border-left: 1px solid #c5c5c5;
+}
+
+.djflyer.schema_right .pag_links {
+	padding-left: 20px;
+	margin: 0 !important;
+}
+
+.djflyer.schema_left .djflyer_titles_box {
+	float: left;
+}
+
+.djflyer.schema_left .djflyer_titles_box .djflyer_titles_box_in {
+	padding: 0 0 0 20px;
+}
+
+.djflyer.schema_left .djflyer_items_box {
+	float: left;
+}
+
+.djflyer.schema_left .djflyer_items_box .djflyer_items_box_in {
+	padding: 0 20px;
+	box-shadow: 1px 0 0 #c5c5c5;
+	-webkit-box-shadow: 1px 0 0 #c5c5c5;
+	border-right: 1px solid #ffffff;
+}
+
+.djflyer.schema_left .pag_links {
+	padding-left: 20px;
+	margin: 0 !important;
+}
+
+.djflyer.schema_bottom .djflyer_titles_box_in {
+	padding-left: 20px;
+}
+
+.djflyer.schema_bottom .pag_links {
+	padding: 0 20px;
+}
+
+.djflyer.schema_bottom .djflyer_items_box .djflyer_items_box_in {
+	padding: 20px 0 0 0;
+	box-shadow: 0 -1px 0 #ffffff;
+	-webkit-box-shadow: 0 -1px 0 #ffffff;
+	border-top: 1px solid #c5c5c5;
+	margin: 0 20px;	
+}
+
+.djflyer .item_tooltip {
+	font-style: italic;
+}
+
+.djflyer .item_desc_img {
+	display: block;
+	background-color: transparent;
+}
+
+.djflyer .item_desc_img.float_left {
+	margin-right: 10px;
+}
+
+.djflyer .item_desc_img.float_right {
+	margin-left: 10px;
+}
+
+.djflyer .item_desc_img.float_top {
+	margin: 10px 0;
+}
+
+.djflyer .item_desc_img img {
+    background: #FFFFFF;
+    border: 1px solid #DADADA;
+    padding: 4px;
+}
+
+.djflyer_cat {
+	font-size: 1.2em;
+	line-height: 1.4em;
+	margin-bottom: 20px;
+	font-weight: bold;
+	padding-right: 20px;
+}
+
+.djflyer_title {
+	padding: 0 20px 20px 0;
+	float: left;
+}
+
+.djflyer_title img {
+	border: 1px solid #dadada;
+	padding: 4px;
+	margin: 0 0 10px 0;
+	background: #FFFFFF;
+}
+
+.djflyer .item_name {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.djflyer .item_title {
+	font-size: 1.2em;
+	line-height: 1.4em;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.djflyer .item_title span {
+	background: url(../images/djflyer_arrow.png) no-repeat left 50%;
+	padding: 0 0 0 12px;
+	margin: 0 0 0 5px;
+}
+
+.djflyer .pag_links span {
+	background: #c5c5c5;
+	color: #ffffff;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 5px;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+.djflyer .pag_links span.active,
+.djflyer .pag_links span:hover {
+	background: #7d7d7d;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+
+.tool-tip {
+	padding: 10px !important;
+}
+
+/********** djflyer_clearfix **********/
+
+.djflyer_clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.djflyer_clearfix { 	
+	display: inline-block;
+}
+
+/* Hides from IE-mac \*/ * html .djflyer_clearfix {
+    height: 1%;
+}
+
+.djflyer_clearfix {
+    display: block !important;
+}
+
+/* End hide from IE-mac */
+
+/* bootstrap modal conflict fix */
+.djflyer .item_desc_img.modal {
+  position: static;
+}

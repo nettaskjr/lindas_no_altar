@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<config>
+		<fieldset 
+		name="global" 
+		label="COM_DJFLYER_CONFIG_GLOBAL_SETTINGS_LABEL">
+			<field name="th_width" type="text" label="COM_DJFLYER_CONFIG_THUMB_WIDHT" size="5" default="68" menu="hide" description="COM_DJFLYER_CONFIG_THUMB_WIDHT_DESC" />
+			<field name="th_height" type="text" label="COM_DJFLYER_CONFIG_THUMB_HEIGHT" size="5" default="50" menu="hide" description="COM_DJFLYER_CONFIG_THUMB_HEIGHT_DESC" />			
+			<field name="descth_width" type="text" label="COM_DJFLYER_CONFIG_THUMB_DESC_WIDHT" size="5" default="300" menu="hide" description="COM_DJFLYER_CONFIG_THUMB_DESC_WIDHT_DESC" />
+			<field name="descth_height" type="text" label="COM_DJFLYER_CONFIG_THUMB_DESC_HEIGHT" size="5" default="0" menu="hide" description="COM_DJFLYER_CONFIG_THUMB_DESC_WIDHT_DESC" />
+			<field name="responsive_css"
+					type="list"
+					label="COM_DJFLYER_CONFIG_RESPONSIVE_CSS"
+					description="COM_DJFLYER_CONFIG_RESPONSIVE_CSS_DESC"
+					size=""
+					default="1"
+				>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+		</fieldset>
+	</config>

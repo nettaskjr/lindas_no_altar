@@ -1,0 +1,24 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+.breadcrumb {
+  margin: 0;
+  > li {
+    color: inherit;
+    display: inline-block;
+    .ie7-inline-block();
+    &:first-child {
+      font-weight: bold;
+    }
+    &.active {
+      color: inherit;
+    }
+    .icon-location:before {
+      content: "\e021";
+    }
+    > .divider {
+      margin: 1px 5px 0px;
+    }
+  }
+}

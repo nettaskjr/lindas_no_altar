@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0.0" method="upgrade">
+	<name>DJFlyer</name>
+	<creationDate>April 2013</creationDate>
+	<author>DJ-Extensions.com</author>
+	<authorEmail>contact@design-joomla.eu</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<copyright>Copyright (C) DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license>GPL</license>
+	<version>3.0.8</version>
+	<description>Component for flyer presenatation</description>
+	
+	<install>
+		<sql>
+            <file charset="utf8" driver="mysql">sql/install.sql</file>
+        </sql>
+    </install>
+	
+	<uninstall>
+		<sql>
+            <file charset="utf8" driver="mysql">sql/uninstall.sql</file>
+        </sql>
+    </uninstall>
+	
+	<administration>
+		<menu link="option=com_djflyer" img="components/com_djflyer/images/dj_flyer-16x16.png">COM_DJFLYER</menu>
+		<files folder="administrator">
+			<filename>config.xml</filename>		
+			<filename>index.html</filename>
+			<filename>djflyer.php</filename>
+			<filename>controller.php</filename>
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>images</folder>
+			<folder>language</folder>
+			<folder>lib</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>			
+		</files>
+	</administration>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>gpl.txt</filename>
+		<folder>images</folder>		
+	</files>	
+    <config>
+		<fields>
+			<fieldset>
+				<field name="th_width" default="68" />
+				<field name="th_height" default="50" />
+				<field name="descth_width" default="300" />
+				<field name="descth_height" default="0" />
+				<field name="responsive_css" default="1" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

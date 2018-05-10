@@ -1,0 +1,171 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// MEDIATOOLS RESPONSIVE
+//---------------------------------------------------------------
+
+//header responsive part
+@media (max-width: 1750px) {
+	#jm-allpage .jm-module.header-ms {
+		.dj-slide-description {
+			font-size: 14px!important;
+		}
+		.jm-custom-btn {
+			margin: 25px 0 0;
+			[class*='btn'] {
+				padding: 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1630px) {
+	#jm-allpage .jm-module.header-ms {
+		margin: 0;
+		.dj-indicators,
+		.navigation-container-custom,
+		.nivo-controlNav {
+			bottom: 10px!important;
+		}
+	}
+}
+
+@media (max-width: 1500px) {
+	#jm-allpage .jm-module.header-ms {
+		.jm-custom-btn {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 1250px) {
+	#jm-allpage .header-ms {
+		.dj-slide-title {
+			display: block;
+			width: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			text-rendering: optimizeLegibility;
+			.box-sizing(border-box);
+		}
+	}
+	#jm-allpage .header2-ms {
+		.dj-slide-title {
+			font-size: 30px!important;
+		}
+		.dj-slide-description,
+		.dj-slide-description p {
+			display: block;
+			width: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			text-rendering: optimizeLegibility;
+			.box-sizing(border-box);
+		}
+	}
+}
+
+@media (max-width: 979px) {
+	.dj-slide-title {
+		display: block;
+		width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-rendering: optimizeLegibility;
+		.box-sizing(border-box);
+	}
+	#jm-allpage .small-gallery-ms .dj-galleryGrid .dj-slide-title {
+		width: auto;
+		white-space: normal;
+		overflow: visible;
+		text-overflow: clip;
+	}
+	.dj-slide-description,
+	.dj-slide-description p {
+		display: block;
+		width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-rendering: optimizeLegibility;
+		.box-sizing(border-box);
+	}
+	#jm-allpage .header-ms {
+		.dj-readmore-wrapper,
+		.jm-custom-btn {
+			display: none;
+		}
+		.dj-slide-title {
+			font-size: 24px!important;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	#jm-allpage .header-ms {
+		.dj-navigation,
+		.navigation-container {
+		 display: none;
+		}
+	}
+	#jm-allpage .dj-slide-title + .dj-slide-description {
+		padding-top: 20px!important;
+		background-position: center 0px!important;
+	}
+}
+
+@media (max-width: 480px) {
+	#jm-allpage,
+	#jm-allpage .header-ms,
+	#jm-allpage .header2-ms {
+		.dj-slide-title {
+			font-size: 18px!important;
+			letter-spacing: normal;
+		}
+	}
+	#jm-allpage,
+	#jm-allpage .header-ms,
+	#jm-allpage .header2-ms {
+		.dj-slide-desc-text {
+			padding: 10px!important;
+		}
+	}
+	#jm-allpage .dj-slide-title + .dj-slide-description {
+		padding: 0!important;
+		background: none!important;
+	}
+	.dj-navigation,
+	.navigation-container,
+	.nivo-directionNav,
+	.dj-readmore-wrapper {
+		display: none!important;
+	}
+	#jm-allpage {
+		.header-ms,
+		.header2-ms {
+			.nivo-controlNav,
+			.dj-slideshow .dj-indicators {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.dj-slide-title,
+	.nivo-controlNav,
+	.dj-indicators,
+	.navigation-container-custom,
+	.dj-slide-description,
+	.dj-slide-desc-text,
+	.dj-slide-desc-bg {
+		display: none!important;
+	}
+}

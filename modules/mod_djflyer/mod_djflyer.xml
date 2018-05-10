@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0.0" client="site" method="upgrade">
+	<name>DJFlyer</name>
+	<author>DJ-Extensions.com</author>
+	<creationDate>April 2013</creationDate>
+	<copyright>Copyright (C) DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>contact@design-joomla.eu</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>3.0.8</version>
+	<description>Module for flyer presenatation</description>
+	<files>
+		<filename module="mod_djflyer">mod_djflyer.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>	
+		<folder>tmpl</folder>
+		<folder>images</folder>	
+		<folder>css</folder>
+		<folder>language</folder>
+		<folder>fields</folder>				
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_djflyer/fields">
+			<fieldset name="basic">
+				<field name="djcats" type="djflcats" multiple="multiple" default="" label="MOD_DJFLYER_CATEGORIES" description="MOD_DJFLYER_CATEGORIES_DESC" />
+				<field name="djitem_limit" type="text" default="4" label="MOD_DJFLYER_ITEMS_PER_PAGE" description="MOD_DJFLYER_ITEMS_PER_PAGE_DESC"  />
+				<field name="djflyer_width" type="text" default="100%" label="MOD_DJFLYER_WIDTH" description="MOD_DJFLYER_WIDTH_DESC" />
+				<field name="djwidth_prop" type="list" default="70-30" label="MOD_DJFLYER_WIDTH_PROPORTIONS" description="MOD_DJFLYER_WIDTH_PROPORTIONS_DESC" >
+					<option value="80-20">80% Description - 20% Items</option>
+					<option value="70-30">70% Description - 30% Items</option>
+					<option value="60-40">60% Description - 40% Items</option>
+					<option value="50-50">50% Description - 50% Items</option>
+					<option value="40-60">40% Description - 60% Items</option>
+					<option value="30-70">30% Description - 70% Items</option>
+					<option value="20-80">20% Description - 28% Items</option>					
+				</field>
+				<field name="readmore_text" type="text" default="" label="MOD_DJFLYER_READMORE_TEXT" description="MOD_DJFLYER_READMORE_TEXT_DESC" />
+				<field name="djorder" type="radio" default="ordering" label="MOD_DJFLYER_ORDER" description="MOD_DJFLYER_ORDER_DESC" >
+					<option value="ordering">MOD_DJFLYER_ORDERING</option>
+					<option value="name">MOD_DJFLYER_NAME</option>
+					<option value="random">MOD_DJFLYER_RANDOM</option>
+				</field>
+				<field name="desc_position" type="radio" default="bottom" label="MOD_DJFLYER_DESC_POSITION" description="MOD_DJFLYER_DESC_POSITION_DESC" >
+					<option value="bottom">MOD_DJFLYER_BOTTOM</option>
+					<option value="left">MOD_DJFLYER_LEFT</option>
+					<option value="right">MOD_DJFLYER_RIGHT</option>
+				</field>				
+				<field name="show_descimg" type="radio" default="1" label="MOD_DJFLYER_SHOW_THUMB_IN_DESC" description="MOD_DJFLYER_SHOW_THUMB_IN_DESC_DESC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="descimg_position" type="radio" default="left" label="MOD_DJFLYER_THUMB_POSITION_IN_DET" description="MOD_DJFLYER_THUMB_POSITION_IN_DET_DESC" >			
+					<option value="left">MOD_DJFLYER_LEFT</option>
+					<option value="right">MOD_DJFLYER_RIGHT</option>
+					<option value="top">MOD_DJFLYER_TOP</option>
+				</field>
+				<field name="show_img" type="radio" default="1" label="MOD_DJFLYER_SHOW_THUMB" description="MOD_DJFLYER_SHOW_THUMB_DESC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="show_cat_name" type="radio" default="1" label="MOD_DJFLYER_SHOW_CAT_NAME" description="MOD_DJFLYER_SHOW_CAT_NAME_DESC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="show_tooltip" type="radio" default="1" label="MOD_DJFLYER_SHOW_TOOLTIP" description="MOD_DJFLYER_SHOW_TOOLTIP_DESC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="current_itemid" type="radio" default="1" label="MOD_DJFLYER_CURRENT_ITEMID" description="MOD_DJFLYER_CURRENT_ITEMID_DESC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="djitemid" type="menuitem" default="200" label="MOD_DJFLYER_SELECT_MENU_ITEM" description="MOD_DJFLYER_SELECT_MENU_ITEM_DESC" />
+				<field name="djduration" type="text" default="300" label="MOD_DJFLYER_DURATION_TIME" description="MOD_DJFLYER_DURATION_TIME_DESC" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="djtitle_width" type="text" label="MOD_DJFLYER_ITEM_BOX_WIDT" description="MOD_DJFLYER_ITEM_BOX_WIDT_DESC" />
+				<field name="djdesc_width" type="text" label="MOD_DJFLYER_DESC_BOX_WIDHT" description="MOD_DJFLYER_DESC_BOX_WIDHT_DESC" />				
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+		</fieldset>
+		</fields>
+	</config>
+	
+</extension>

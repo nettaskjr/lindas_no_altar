@@ -1,0 +1,41 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// DJFLYER RTL
+//---------------------------------------------------------------
+
+#jm-allpage .djflyer .djflyer_in {
+  .djflyer_title {
+    float: right;
+  }
+  .item_title {
+    span {
+      display: inline-block;
+      background: url("../images/flyer-arrow_RTL.png") no-repeat right 50%;
+      margin: 0 5px 0 0;
+      padding: 0 15px 0 0;
+    }
+  }
+  .item_link {
+    text-align: left;
+  }
+  .pag_links {
+    span {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+}
+
+#jm-allpage .djflyer.schema_bottom {
+  .djflyer_title {
+    &:before {
+      left: auto;
+      right: 0;
+    }
+  }
+}
